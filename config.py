@@ -5,10 +5,10 @@ THRESHOLD = 100000
 
 # Colors
 BACKGROUND = (10,10,0)
-PARTICLE = (np.random.randint(255), np.random.randint(255), np.random.randint(255))
+PARTICLE = (np.random.randint(100,255), np.random.randint(100,255), np.random.randint(100,255))
 
 # Canvas
-WIDTH, HEIGHT = 1280, 720
+WIDTH, HEIGHT = 1366, 768
 FPS = 144
 
 # Camera Rotation
@@ -17,28 +17,30 @@ ANGLE = DEFAULT_ANGLE
 dANGLE = 0.001
 
 # Attractor settings
-ATTRACTOR = ["LORENZ", "THOMAS"]
 CURRENT_INDEX = 0
-MAX_INDEX = len(ATTRACTOR)
-
-# Attractor scales
 LORENZ_SCALE = 10
-THOMAS_SCALE = 50
+THOMAS_SCALE = 80
+AIZAWA_SCALE = 160
+DADRAS_SCALE = 30
+CHEN_SCALE = 30
+ROSSLER_SCALE = 10
+HALVORSEN_SCALE = 30
+RABINOVICH_FABRIKANT_SCALE = 100
+THREE_SCROLL_UNIFED_SCALE = 3
+SPROTT_SCALE = 160
+FOUR_WING_SCALE = 160
+ATTRACTOR = ["LORENZ", "THOMAS", "AIZAWA", "DADRAS", "CHEN", "ROSSLER", "HALVORSEN", "RABINOVICH FABRIKANT", "THREE SCROLL UNIFED", "SPROTT", "FOUR WING"]
+MAX_INDEX = len(ATTRACTOR)
 
 # Particles
 SIZE = 1
-NUM_PARTICLES = 1
-RANDOM_LOCATION = True
+NUM_PARTICLES = 5
 
 # Matrices
 projMat = np.array([[1, 0, 0],
                     [0, 1, 0]])
-DEFAULT_X, DEFAULT_Y, DEFAULT_Z = 0.01, 0, 0
-x, y, z = DEFAULT_X, DEFAULT_Y, DEFAULT_Z
-points = np.array([[[x], [y], [z]]])
-if NUM_PARTICLES > 1 and RANDOM_LOCATION:
-    for _ in range(NUM_PARTICLES-1):
-        x, y, z = 10*(np.random.rand()-0.5), 10*(np.random.rand()-0.5), 10*(np.random.rand()-0.5)
-        points = np.append(points, np.array([[[x], [y], [z]]]), axis=0)
-    
+init_points = {}
+for i in range(NUM_PARTICLES):
+    init_points[i] = np.empty((1,3,1))
+
 

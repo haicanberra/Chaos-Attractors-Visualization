@@ -12,8 +12,11 @@ if __name__ == "__main__":
     canvas = pygame.display.set_mode((WIDTH, HEIGHT))
     clock = pygame.time.Clock() 
 
+    font = pygame.font.Font('font.ttf', 32)
+
     running = True
     maxed = False
+    set_default(ATTRACTOR[CURRENT_INDEX])
     while running:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -30,6 +33,7 @@ if __name__ == "__main__":
                         CURRENT_INDEX = MAX_INDEX-1
                     else:
                         CURRENT_INDEX = CURRENT_INDEX - 1
+                    set_default(ATTRACTOR[CURRENT_INDEX])
                 if event.key == pygame.K_d:
                     temp = CURRENT_INDEX
                     from config import *
@@ -39,8 +43,13 @@ if __name__ == "__main__":
                         CURRENT_INDEX = 0
                     else:
                         CURRENT_INDEX = CURRENT_INDEX + 1
-
+                    set_default(ATTRACTOR[CURRENT_INDEX])
+        title = ATTRACTOR[CURRENT_INDEX].swapcase()
+        title = title.title()
+        pygame.display.set_caption(title + " Attractor")
+        text = font.render(title, True, PARTICLE)
         canvas.fill(BACKGROUND)
+        canvas.blit(text, (50, HEIGHT//2-32))
         clock.tick(FPS)
 
         rotX = np.array([[1, 0, 0],
@@ -57,28 +66,24 @@ if __name__ == "__main__":
         ANGLE = ANGLE + dANGLE
         
         if not maxed:
-            points_copy = np.copy(points)
-            if NUM_PARTICLES == 1:
-                x, y, z = update_xyz(x, y, z, ATTRACTOR[CURRENT_INDEX])
-                points = np.append(points, np.array([[[x], [y], [z]]]), axis=0)
-            else:
-                for i in range(NUM_PARTICLES):
-                    [[x], [y], [z]] = points_copy[-i]
-                    x, y, z = update_xyz(x, y, z, ATTRACTOR[CURRENT_INDEX])
-                    points = np.append(points, np.array([[[x], [y], [z]]]), axis=0)
+            init_points_copy = init_points.copy()
+            for i in range(len(init_points_copy)):
+                x, y, z = update_xyz(init_points_copy[i][-1][0][0], init_points_copy[i][-1][1][0], init_points_copy[i][-1][2][0], ATTRACTOR[CURRENT_INDEX])
+                init_points[i] = np.append(init_points[i], np.array([[[x], [y], [z]]]), axis=0)
 
-        for point in points:
-            rot2d = np.dot(rotX, np.dot(rotY, np.dot(rotZ, point)))
-            proj2d = np.dot(projMat, rot2d)
-            scale = get_scale(ATTRACTOR[CURRENT_INDEX])
-            x_ = int(proj2d[0][0] * scale) + WIDTH//2
-            y_ = int(proj2d[1][0] * scale) + HEIGHT//2
-            pygame.draw.circle(canvas, PARTICLE, (x_, y_), SIZE)
+        for ip in init_points:
+            for p in init_points[ip]:
+                rot2d = np.dot(rotX, np.dot(rotY, np.dot(rotZ, p)))
+                proj2d = np.dot(projMat, rot2d)
+                scale = get_scale(ATTRACTOR[CURRENT_INDEX])
+                x_ = int(proj2d[0][0] * scale) + WIDTH//2
+                y_ = int(proj2d[1][0] * scale) + HEIGHT//2
+                pygame.draw.circle(canvas, PARTICLE, (x_, y_), SIZE)
 
         pygame.display.update()
 
         if THROTTLE:
-            if points.shape[0] >= THRESHOLD:
+            if init_points[0].shape[0] >= THRESHOLD:
                 maxed = True
 
     pygame.quit()
