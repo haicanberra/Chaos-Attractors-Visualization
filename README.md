@@ -7,11 +7,9 @@ Strange attractors included:
 1. Lorenz  
     Parameters: σ = 10, ρ = 28, β = 8/3  
     Equations:  
-        $$
-        \frac{dx}{dt} &= \sigma(-x + y) \\
-        \frac{dy}{dt} &= -xz + \rho x - y \\
-        \frac{dz}{dt} &= xy - \beta z \\
-        $$
+        $$\frac{dx}{dt} &= \sigma(-x + y) \\$$
+        $$\frac{dy}{dt} &= -xz + \rho x - y \\$$
+        $$\frac{dz}{dt} &= xy - \beta z \\$$
     - Thomas
     - Aizawa
     - Dadras
