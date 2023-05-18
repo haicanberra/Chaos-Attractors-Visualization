@@ -9,8 +9,8 @@ Strange attractors included:
     Equations:
     $
     \begin{aligned}
-    \frac{dx}{dt} = \sigma(-x + y)
-    \frac{dy}{dt} = -xz + \rho x - y
+    \frac{dx}{dt} = \sigma(-x + y) \\
+    \frac{dy}{dt} = -xz + \rho x - y \\
     \frac{dz}{dt} = xy - \beta z
     \end{aligned}
     $
