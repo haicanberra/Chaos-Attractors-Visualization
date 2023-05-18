@@ -7,11 +7,11 @@ Strange attractors included:
 1. Lorenz  
     Parameters: σ = 10, ρ = 28, β = 8/3  
     Equations:
-    \begin{align}
+    \begin{align*}
     \frac{dx}{dt} = \sigma(-x + y)
     \frac{dy}{dt} = -xz + \rho x - y
     \frac{dz}{dt} = xy - \beta z
-    \end{align}
+    \end{align*}
 
 2. Thomas  
     Parameters: b = 0.208186  
