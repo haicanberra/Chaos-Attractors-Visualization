@@ -1,4 +1,4 @@
-# Chaos-Attractors-Visualization
+# Chaos Attractors Visualization
 
 A tool written in Python using Pygame and NumPy for visualizing Strange Attractors
 in Chaos Theory.  
