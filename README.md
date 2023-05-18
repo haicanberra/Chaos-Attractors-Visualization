@@ -4,14 +4,16 @@ A tool written in Python using Pygame and NumPy for visualizing Strange Attracto
 in Chaos Theory.  
   
 Strange attractors included:  
-1. Lorenz  
+1. Lorenz 
     Parameters: σ = 10, ρ = 28, β = 8/3  
     Equations:
-    \begin{align*}
+    $
+    \begin{aligned}
     \frac{dx}{dt} = \sigma(-x + y)
     \frac{dy}{dt} = -xz + \rho x - y
     \frac{dz}{dt} = xy - \beta z
-    \end{align*}
+    \end{aligned}
+    $
 
 2. Thomas  
     Parameters: b = 0.208186  
