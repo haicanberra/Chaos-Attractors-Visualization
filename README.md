@@ -11,7 +11,7 @@ Attractors selected from [3D-Meier](http://www.3d-meier.de/tut19/Seite0.html).
 
 ## Mathematics
 Strange attractors included are listed below.  
-| Name | Parameters | Equations | 
+| Attractors | Parameters | Equations | 
 | --- | --- | --- |
 | Lorenz | $\sigma = 10, \rho = 28, \beta = \frac{8}{3}$ | $\frac{dx}{dt} = \sigma(-x + y),\frac{dy}{dt} = -xz + \rho x - y,\frac{dz}{dt} = xy - \beta z$ | 
 | Thomas | $a = 0.95, b = 0.7, c = 0.6, d = 3.5, e = 0.25, f = 0.1$ | $\frac{{dx}}{{dt}} = \sin(y) - b \cdot x,\frac{{dy}}{{dt}} = \sin(z) - b \cdot y,\frac{{dz}}{{dt}} = \sin(x) - b \cdot z\ $ |
