@@ -1,7 +1,7 @@
 # Chaos Strange Attractors Visualization
 
 ## About
-A visualization tool written in Python for visualizing Strange Attractors in Chaos Theory.  
+A visualization tool written in Python for Strange Attractors in Chaos Theory.  
 
 ## Packages
 Pygame, NumPy.
