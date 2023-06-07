@@ -40,6 +40,6 @@ pip install -r requirements.txt
 - ```A```/```D```: Change attractor.
 - ```Esc```: Exit.
 ## Notes
-- Add z scaling so the closer the particles the bigger it is.
 - Preset parameters and inital coordinates are tweaked to be stable.
 - These can be tweaked in attractors.py but might cause coordinates to overflow integer limit.
+- <ins>Add</ins>: z scaling so the closer the particles the bigger it is.
