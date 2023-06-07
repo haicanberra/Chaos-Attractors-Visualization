@@ -1,15 +1,16 @@
 # Chaos Strange Attractors Visualization
 
 ## About
-A visualization tool written in Python for Strange Attractors in Chaos Theory.  
+- A visualization tool written in Python for Strange Attractors in Chaos Theory.  
 
 ## Packages
-Pygame, NumPy.
-
+- NumPy.
+- Pygame.
+  
 ## References
-Attractors by [Wikipedia](https://en.wikipedia.org/wiki/Attractor).  
-Attractors' Equations by [3D-Meier](http://www.3d-meier.de/tut19/Seite0.html).
-
+- Attractors by [Wikipedia](https://en.wikipedia.org/wiki/Attractor).  
+- Attractors' Equations by [3D-Meier](http://www.3d-meier.de/tut19/Seite0.html).
+  
 ## Mathematics
 Strange attractors included are listed below.  
 | Attractors | Parameters | Equations | 
