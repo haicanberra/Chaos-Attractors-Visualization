@@ -11,7 +11,7 @@
 - Attractors by [Wikipedia](https://en.wikipedia.org/wiki/Attractor).  
 - Attractors' Equations by [3D-Meier](http://www.3d-meier.de/tut19/Seite0.html).
   
-## Mathematics
+## Specifications
 Strange attractors included are listed below.  
 | Attractors | Parameters | Equations | 
 | --- | --- | --- |
@@ -27,9 +27,7 @@ Strange attractors included are listed below.
 | Sprott | $a=2.07,b=1.79$ | $\frac{{dx}}{{dt}} = y+axy+xz,\frac{{dy}}{{dt}} = 1-bx^2+yz,\frac{{dz}}{{dt}} = x-x^2-y^2$ |
 | Four-Wing | $a=0.2, b=0.01, c=-0.4$ | $\frac{{dx}}{{dt}} = ax+yz,\frac{{dy}}{{dt}} = bx+cy-xz,\frac{{dz}}{{dt}} = -z-xy$ |
 
-## Notes
-- Preset parameters and inital coordinates are tweaked to be stable.
-- These can be tweaked in attractors.py but might cause coordinates to overflow integer limit.
+
 
 ## Installation
 ```
@@ -37,5 +35,11 @@ python -m venv env
 source env/Scripts/activate
 pip install -r requirements.txt
 ```  
-## Futher Optimizations:
+## Usage
+- Launch ```main.py```.
+- ```A```/```D```: Change attractor.
+- ```Esc```: Exit.
+## Notes
 - Add z scaling so the closer the particles the bigger it is.
+- Preset parameters and inital coordinates are tweaked to be stable.
+- These can be tweaked in attractors.py but might cause coordinates to overflow integer limit.
