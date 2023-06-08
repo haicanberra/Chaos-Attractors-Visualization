@@ -1,16 +1,40 @@
+
+<div align="center">
+
 # Chaos Strange Attractors Visualization
 
+<img src="./thumbnail.png" width="300">
+
+<img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue">
+
+<img src="https://img.shields.io/badge/Numpy-777BB4?style=for-the-badge&logo=numpy&logoColor=white">
+
+</div> 
+
+## Contents
+* [About](#about)
+* [Packages](#packages)
+* [References](#references)
+* [Specifications](#specifications)
+* [Installation](#installation)
+* [Usages](#usages)
+* [Notes](#notes)
+
+<a name="about"></a>
 ## About
 - A visualization tool written in Python for Strange Attractors in Chaos Theory.  
 
+<a name="packages"></a>
 ## Packages
 - NumPy.
 - Pygame.
   
+<a name="references"></a>
 ## References
 - Attractors by [Wikipedia](https://en.wikipedia.org/wiki/Attractor).  
 - Attractors' Equations by [3D-Meier](http://www.3d-meier.de/tut19/Seite0.html).
   
+<a name="specifications"></a>
 ## Specifications
 Strange attractors included are listed below.  
 | Attractors | Parameters | Equations | 
@@ -28,17 +52,21 @@ Strange attractors included are listed below.
 | Four-Wing | $a=0.2, b=0.01, c=-0.4$ | $\frac{{dx}}{{dt}} = ax+yz,\frac{{dy}}{{dt}} = bx+cy-xz,\frac{{dz}}{{dt}} = -z-xy$ |
 
 
-
+<a name="installation"></a>
 ## Installation
 ```
-python -m venv env
+python3 -m venv env
 source env/Scripts/activate
 pip install -r requirements.txt
 ```  
+
+<a name="usages"></a>
 ## Usages
 - Launch ```main.py```.
 - ```A```/```D```: Change attractor.
 - ```Esc```: Exit.
+
+<a name="notes"></a>
 ## Notes
 - Preset parameters and inital coordinates are tweaked to be stable.
 - These can be tweaked in attractors.py but might cause coordinates to overflow integer limit.
