@@ -1,9 +1,10 @@
 
 <div align="center">
 
-# Chaos Strange Attractors Visualization
 
 <img src="./thumbnail.png" width="300">
+
+# Chaos Strange Attractors Visualization
 
 <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue">
 
