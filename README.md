@@ -4,7 +4,7 @@
 
 <img src="./thumbnail.png" width="300">
 
-# Chaos Strange Attractors Visualization
+# Strange Attractors Visualizer
 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
@@ -22,7 +22,7 @@
 
 <a name="about"></a>
 ## About
-Chaos Theory’s Strange Attractor Visualization	
+Strange Attractors Visualizer - Chaos Theory’s Strange Attractor Illustration	
 - Created a dynamic visualizer in Python capable of rendering up to 11 distinct strange attractors.
 - Simplified curve generation by evaluating and subsampling attractor functions, allowing visualization of complex systems.
 - Investigated up to 5 decimal places of local initialization coordinates for consistent convergent trajectories. 
