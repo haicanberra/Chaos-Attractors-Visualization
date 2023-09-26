@@ -22,7 +22,11 @@
 
 <a name="about"></a>
 ## About
-- A visualization tool written in Python for Strange Attractors in Chaos Theory.  
+Chaos Theory’s Strange Attractor Visualization	
+- Created a dynamic visualizer in Python capable of rendering up to 11 distinct strange attractors.
+- Simplified curve generation by evaluating and subsampling attractor functions, allowing visualization of complex systems.
+- Investigated up to 5 decimal places of local initialization coordinates for consistent convergent trajectories. 
+
 
 <a name="packages"></a>
 ## Packages
