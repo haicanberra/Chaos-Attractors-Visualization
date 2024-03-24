@@ -1,4 +1,4 @@
-import pygame, os, numpy as np
+import pygame, os, sys, numpy as np
 from config import *
 from attractors import *
 from utils import *
@@ -12,7 +12,10 @@ if __name__ == "__main__":
     canvas = pygame.display.set_mode((WIDTH, HEIGHT))
     clock = pygame.time.Clock() 
 
-    font = pygame.font.Font('font.ttf', 32)
+    if os.path.exists('font.ttf'):
+        font = pygame.font.Font('font.ttf', 32)
+    else:
+        font = pygame.font.SysFont('arial', 32)
 
     running = True
     maxed = False
@@ -87,4 +90,4 @@ if __name__ == "__main__":
                 maxed = True
 
     pygame.quit()
-    quit()
+    sys.exit()
