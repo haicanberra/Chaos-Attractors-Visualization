@@ -90,4 +90,3 @@ if __name__ == "__main__":
                 maxed = True
 
     pygame.quit()
-    sys.exit()
